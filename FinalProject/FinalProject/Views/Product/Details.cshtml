@@ -1,0 +1,26 @@
+﻿@model Product
+
+<div class="d-flex justify-content-center">
+    <h1 class="text-primary">Product Details</h1>
+</div>
+
+<br />
+<hr />
+<br />
+
+<div class="card" style="width: 18rem;">
+    <div class="col-md-4 text-center p-4">
+        <img src="@Url.Content(Model.ImagePath)" class="img-fluid rounded" alt="@Model.Title" style="max-height:300px;" />
+
+
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">@Html.DisplayNameFor(P => P.Title): @Model.Title</h5>
+        <h6 class="card-subtitle mb-2 text-muted">@Html.DisplayNameFor(p => p.ProductId): @Model.ProductId</h6>
+        <h6 class="card-subtitle mb-2 text-muted">@Html.DisplayNameFor(p => p.Price): @Model.Price</h6>
+        <h6 class="card-subtitle mb-2 text-muted">@Html.DisplayNameFor(p => p.Description): @Model.Description</h6>
+        <h6 class="card-subtitle mb-2 text-muted">@Html.DisplayNameFor(p => p.Quantity): @Model.Quantity</h6>
+        <h6 class="card-subtitle mb-2 text-muted">@Html.DisplayNameFor(p => p.Category): @Model.Category.CategoryName</h6>
+        <a asp-controller="Product" asp-action="Index" class="btn btn-primary mt-3">Back</a>
+    </div>
+</div>
